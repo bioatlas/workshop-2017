@@ -1,0 +1,110 @@
+---
+title: "ALA Workshop"
+subtitle: ""
+author: "Stockholm, Swedish Museum of Natural History"
+date: "May 2017"
+output:
+  tint::tintHtml: 
+     self_contained: TRUE
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tint)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
+
+options(htmltools.dir.version = FALSE)
+
+fig2 <- function(fig_path) {
+	library(imager)
+#	fig_path <- "../style-assets/fig/bg-symposium.jpg"
+	bmp <- readbitmap::read.bitmap(fig_path)
+	dim(bmp) <- c(dim(bmp)[1:2], 1, dim(bmp)[3])
+	r <- cimg(bmp) %>% mirror("x") %>% imrotate(-90)
+	h <- height(r)
+	w <- width(r)
+	a <- h / w
+	r2 <- as.raster(r)
+
+	op <- par(bg = "transparent", mar = c(0, 0, 0, 0), 
+						bty = "n", xpd = NA)
+#	plot(c(1, h), c(1, w), 
+	plot(c(0, 1), c(0, 1),
+			 asp = a, axes = FALSE, bty = "n", 
+#			 frame.plot = TRUE,
+			 type = "n", xlab = "", ylab = "")
+	par(op)
+	rasterImage(r2, 0, 0, 1, 1, interpolate = TRUE)
+}
+
+fig3 <- function(fig_path) {
+	r <- as.raster(readbitmap::read.bitmap(fig_path))
+	grid::grid.newpage()
+	grid::grid.raster(r)
+}
+
+fig <- function(fig_path) {
+
+	library(ggplot2)
+	r <- as.raster(readbitmap::read.bitmap(fig_path))
+
+	ggplot() +
+		annotation_raster(r, -Inf, Inf, -Inf, Inf, interpolate = TRUE) +
+		theme(plot.background = element_blank()) +
+		theme_void()
+}
+
+
+```
+
+
+```{r fig-nocap-fullwidth-1, echo = FALSE, fig.fullwidth=TRUE, fig.width=12, cache=FALSE}
+fig("fig/stockholm.jpg")
+```
+
+In May 2017, a workshop about customization of biodiversity portals based on the Atlas of Living Australia code is planned to be held in Stockholm. This workshop is co-arranged with the 9th European GBIF Node meeting ^[see [European GBIF Node meeting](https://bioatlas.se/registration-is-open-to-the-9th-european-gbif-nodes-meeting/) announcement].
+
+
+```{r fig-nocap-margin-before-first, fig.margin=TRUE, fig.width=2, fig.height=2, cache=FALSE, echo=FALSE}
+fig("fig/gbif-logo.jpg")
+```
+
+# Suggested Topics
+
+`r newthought('The workshop ')` is planned to cover some topics related to DevOps of biodiversity portals based on [Atlas of Living Australia code](https://github.com/AtlasofLivingAustralia). Currently proposed topics include subjects related to using Docker, to automate builds and releases and also how to integrate external services and how to customize existing Atlas components with language translations and other national customizations:
+
+- Docker Fundamentals
+
+- Building and Releasing using Continuous Integration processes (using make, git, travis and docker)
+
+- Adding "non-core" components to the system composition 
+
+- Upgrading indvidual ALA components to new releases
+
+- Customizing ALA components and packaging using Docker - experiences from BioAtlas.se in Sweden.
+
+- Experiences from internationalization (I18N) and national customizations of ALA modules
+
+- Building a nationally customized taxonomic backbone based on the Atlas name indexing module
+
+- Tools for testing performance and scanning system components
+
+- Spatial Portal - recommended practices for setting up layers etc
+
+- Integrating Mirroreum - a web-based biodiversity analysis platform for reproducible research
+
+- Discussions - Overiew of Work in progress and Future Works
+
+# Preparations and Contact
+
+`r newthought('Participants are invited')` to collaborate in shaping the agenda. 
+
+You can take part in shaping the agenda and topics using [this link](https://).
+
+
+```{r bib, include=FALSE}
+# create a bib file for the R packages used in this document
+knitr::write_bib(c('base', 'rmarkdown'), file = 'skeleton.bib')
+```
