@@ -1,0 +1,92 @@
+---
+title: "Agenda for ALA Workshop"
+subtitle: ""
+author: "Stockholm, Swedish Museum of Natural History"
+date: "May 2017"
+output:
+  tint::tintHtml: 
+     self_contained: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Tuesday 9 May (9 AM - 5 PM)
+
+## 09:00 - 10:15 Presentation at Main Event
+
+- Nodes portals (and other tools) - Update on ALA and Living Atlases (Dave Martin / ME Lecoq / Markus Skyttner / Manash Shah  / Jörg H / Cristina Villaverde / Rui Figueira 30 minutes) - format: 3 slides max per speaker (not technical)
+- Presentation of the community (CESP projects, COST, which countries are involved in the community, etc.) 10 minutes - ME Lecoq / Cristina V
+- Presentation of CKAN-based Belgian Data Portal (André Heughebaert) 10 minutes
+- Discussion and questions 10 minutes
+  
+## 10:15 - 10:30 Coffee break
+
+
+> __From here on we break out into a parallel track and have a more technical focus__
+
+## 10:30 - 12:00 Session 1 (aim for 15 minute sessions)
+
+- Introduce ALA and current status including deployments
+- Docker Fundamentals - What is it and why use it?
+- Compare deployment models (Ansible, Docker) and when each one is suitable
+- Building and Releasing using Continuous Integration processes
+- Current method using maven, github, Travis and GBIF maven repository
+- Adaptations used in BioAtlas - make, docker, Docker Hub, Travis
+- Changing and rolling out ALA components using Docker
+- Customizing ALA components and packaging using Docker - experiences from BioAtlas.se in Sweden - for example building a Docker Image for the collectory service
+- Upgrading individual ALA components to new releases - for example how to upgrad  e only the collectory service, or to add non-core components to provide additional functionality such as HTTPS
+
+## 12:00 - 13:00 Lunch
+
+## 13:00 - 14:15 Session 2 (with Skype for Spain and other interested parties)
+
+- Experiences from internationalization (I18N) and national customizations of ALA modules - recommendations and lessons learnt from tools and practices used so far in national deployments - approx 30 minutes (15 minutes ME/Santiago presentation + 15 minutes of discussion and questions)
+- Building a nationally customized taxonomic backbone based on the Atlas name indexing module - approx 45’ (15’ talk from Dave M + 15’ showing Swedish attempt + 15’ discussions)
+
+## 14:15 - 15:30 Session 3 - "Non-core" components
+
+- Adding “non-core” components to the system composition such as components that run backups etc (Markus S / Manash S)
+- Tools for testing performance and scanning system components (Markus S)
+- Integrating Mirroreum - a web-based biodiversity analysis platform for reproducible research (Markus S)
+- ALA4R setup customized to use data from a national portal
+
+## 15:30 - 15:45 Coffee break
+
+## 15:45 - 17:00 Session 4 - Open Session
+
+- Bring up relevant topics and current questions
+
+# Wednesday 10 May 2017 (9 AM - 4 PM)
+
+
+## 09:00 - 10:20  Session 5 
+
+- Hands-on session building a Taxonomic backbone using national data sources - Dave Martin / Manash S and Markus S
+
+## 10:20 - 10:40  Coffee break
+
+## 10:40 - 12:00  Session 6 - Spatial Portal 
+
+- Architectural overview Dave Martin 20 minutes
+- Recommended practices for setting up layers etc
+- Work done in France - experiences and lessons learnt in the area of the Spatial Portal, Marie-Elise L 
+
+## 12:00 - 13:00  Lunch
+
+## 13:00 - 14:30  Session 7 - Hands-on session 
+
+- Spatial components and/or ...
+- Species Lists and/ or ...
+- more ...
+
+## 14:30 - 16:00  Session 8 - Discussions and Future Directions
+
+- Discussions - Overview of Work in progress and Future Works
+
+# Links
+
+- [Workshop webpages](https://bioatlas.github.io/workshop-2017/)
+- [Workshop materials - sources](https://bioatlas.github.io/workshop-2017/)
+- [9th European Nodes Meeting Programme](https://docs.google.com/document/d/1Kob4-zxQus4ry35vF56OKN3Jzyuu8flwUPUBoEpNjqY/edit?usp=sharing_eil&invite=CP_xtpQB&ts=58ecc0d0)

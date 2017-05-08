@@ -1,0 +1,49 @@
+---
+title: "Docker Fundamentals"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Docker Fundamentals
+
+What is it and why use it?
+
+## Deploying and running services
+
+Deployments can be using
+
+  * Ansible
+  * Docker
+  
+When is each one is suitable?
+
+## Building and Releasing
+
+Can software be build locally in a reproducible way?
+
+- A `Dockerfile` defines a Docker image or container
+- A `Makefile` builds and runs and releases those images
+
+## Continuous Integration processes
+
+A change can trigger a build and release a new version
+
+- A GitHub repo can contain a .travis.yml file
+- This file can if the build is succesful then release to GitHub Releases (.war, .jar) or Docker Hub (full images)
+
+## Local builds from source
+
+## Local builds using existing artifacts
+
+## Changing the Collectory service
+
+## Upgrading various layers of the stacks
+
+- Upgrading a .war file
+- Upgrading middleware
+- Upgrading operating systems
+- Switching IaaS provider (from Azure to DO to "bare metal")
+
