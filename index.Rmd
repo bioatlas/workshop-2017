@@ -35,7 +35,9 @@ fig <- function(fig_path) {
 fig("fig/stockholm.jpg")
 ```
 
-In May 2017, a workshop about customization of biodiversity portals based on the Atlas of Living Australia code is planned to be held in Stockholm. This workshop is co-arranged with the 9th European GBIF Node meeting ^[see [European GBIF Node meeting](https://bioatlas.se/registration-is-open-to-the-9th-european-gbif-nodes-meeting/) announcement].
+In May 2017, a technical workshop about customization of biodiversity portals based on the Atlas of Living Australia code is planned to be held in Stockholm. 
+
+This workshop is co-arranged with the 9th European GBIF Node meeting ^[see [European GBIF Node meeting](https://bioatlas.se/registration-is-open-to-the-9th-european-gbif-nodes-meeting/) announcement].
 
 
 ```{r fig-nocap-margin-before-first, fig.margin=TRUE, fig.width=2, fig.height=2, cache=FALSE, echo=FALSE}
@@ -44,35 +46,22 @@ fig("fig/gbif-logo.jpg")
 
 # Suggested Topics
 
-`r newthought('The workshop ')` is planned to cover some topics related to DevOps of biodiversity portals based on [Atlas of Living Australia code](https://github.com/AtlasofLivingAustralia). Currently proposed topics include subjects related to using Docker, to automate builds and releases and also how to integrate external services and how to customize existing Atlas components with language translations and other national customizations:
+`r newthought('The workshop ')` is planned to cover some topics related to DevOps of biodiversity portals based on [Atlas of Living Australia code](https://github.com/AtlasofLivingAustralia). 
 
-- Docker Fundamentals
+Currently proposed topics for the workshop sessions include subjects related to customizing a national portal based on the Atlas of Living Australia software using tools such as Docker for automating builds and releases. 
 
-- Building and Releasing using Continuous Integration processes (using make, git, travis and docker)
-
-- Adding "non-core" components to the system composition 
-
-- Upgrading indvidual ALA components to new releases
-
-- Customizing ALA components and packaging using Docker - experiences from BioAtlas.se in Sweden.
-
-- Experiences from internationalization (I18N) and national customizations of ALA modules
-
-- Building a nationally customized taxonomic backbone based on the Atlas name indexing module
-
-- Tools for testing performance and scanning system components
-
-- Spatial Portal - recommended practices for setting up layers etc
-
-- Integrating Mirroreum - a web-based biodiversity analysis platform for reproducible research
-
-- Discussions - Overiew of Work in progress and Future Works
+We also plan to discuss how to integrate external services and approaches for customizing existing Atlas components with language translations and other national customizations.
 
 # Participation
 
 `r newthought('Participants are invited')` to collaborate in shaping the agenda. 
 
 You can register your participation using [the registration page](http://www.nrm.se/english/researchandcollections/bioinformaticsandgenetics/europeangbifnodesmeeting.9004194.html).
+
+
+# Agenda
+
+[Current Agenda](agenda)
 
 # Contact details
 
