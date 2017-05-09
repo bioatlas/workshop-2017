@@ -1,0 +1,47 @@
+---
+title: "BioAtlas Sweden"
+author: "Manash Shah & Markus Skyttner"
+date: "May 9, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+##Bioatlas Sweden, Why, How ?
+
+Beyond exchanging datasets; integrate systems, collaborate and exchange software and workflows.
+
+Integrate system using Open source Software and Tools.
+
+- Open source ALA modules
+- Docker based infrastructure with lightweight containers
+- Can run inside of Virtual Machines (but doesn’t have to)
+- Run on in-house or cloud infrastructures, but also on developer’s laptop (!)
+- Portable local builds using Makefiles
+- Dockerfiles & “docker-compose”
+- Continuous integration using Github, Travis CI, Dockerhub
+
+## Core ALA Modules Implemented
+ALA modules as microservices (Docker images)
+
+- Biocache
+- Collectory
+- Nameindex
+- Logger-service
+- Image-service
+- Webapi
+- Dashboard
+
+## Work in progress, Future Works
+- Webbased analysis platform for reproducible biodiversity research (Mirroreum)
+- ALA4R integration
+- Translations and Internationalization
+- Spatial Portal
+- Swedish Taxonomic Backbone
+- User Interface customization
+- Non-core components
+- Content / Datasets upload, quality improvement
+
+[BioAtlas Sweden](https://bioatlas.se)
+
